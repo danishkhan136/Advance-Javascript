@@ -120,40 +120,80 @@
 // func();
 
 
-//now the click inside the fuc clicklimiter is private you can not access it out side the function you can now only access or use it through closure not original one its backlinks 
+//now the click inside the fuc clicklimiter is private you can not access it out side the function you can now only access
+//  or use it through closure not original one its backlinks 
 
 
-// TOASTER PROJECT WITH CLOSURE
+//THIS KEY WORD
 
-function createToaster(config) {
+// this keyword is special keyword,jassie ka baki saari value ya aun ka nature same retha hai "this"
+//  keyword ka value ar nature badal jata hai is baat sa ka ap ausa kahan use kar raha hoo
 
-    return function (str) {
-        let div = document.createElement("div");
-        div.textContent = str;
-        div.className =
-            `inline-block ${config.theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-black"} px-6 py-3 rounded shadow-lg pointer-events-none`;
-        document.querySelector(".parent").appendChild(div);
+//global scope
+//window - prime minister - supreme
+// console.log(this);
 
-        if (config.positionX !== "left" || config.positionY !== "top") {
-            document.querySelector(".parent").classList.add("fixed");
-            document.querySelector(".parent").className +=
-                `${config.positionX === "right" ? "right-5" : "left-5"} ${config.positionY === "bottom" ? "bottom-5" : "top-5"}`;
-        }
+//function scope / function ka andar
+// function abcd(){
+//     console.log(this);
+// }
 
-        setTimeout(() => {
-            document.querySelector(".parent").removeChild(div);
-        }, config.duration * 1000);
-    };
-}
+// abcd();
 
-let toaster = createToaster({
-    positionX: "right",
-    positionY: "bottom",
-    theme: "dark",
-    duration: 3,
-});
+//A function inside a object is called method
+//method scope
+// let obj = {
+//     name: "Danish",
+//     age : 23,
+//     sayName: function(){
+//         console.log(this.name);
+//     },
+// };
 
-toaster("Download Done!");
-setTimeout(() => {
-    toaster("Danish is Coding!")
-}, 2000);
+// obj.sayName();
+
+// let obj = {
+//     name: "Danish",
+//     age : 23,
+//     sayName: function(){
+//         function defg(){
+//         console.log(this);
+//         }
+//         defg();
+//     },
+// };
+
+// obj.sayName();
+
+
+//arrow fuction scope
+// let obj = {
+//     name: "Danish",
+//     age : 23,
+//     sayName: () =>{
+//         console.log(this.name);
+//     },
+// };
+
+// obj.sayName();
+// this keyword lose his value
+
+
+
+
+//event handler scope / event handler ka andar
+// document.querySelector("h1").addEventListener("click",function(){
+//     console.log(this.style.color = "blue");
+// })
+
+// //class scope
+// class Abcd{
+//     constructor(){
+//         console.log("Danish");
+//         this.a=15;
+//     }
+// }
+
+// let val = new Abcd();
+//new Abcd(); make blank object
+
