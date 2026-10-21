@@ -98,26 +98,62 @@
 
 //example 4 closure in encapsulation
 
-function clicklimiter(){
-    let click=0;
-    return function(){
-        if(click <5){
-            click++
-            console.log(`clicked : ${click} times `)
-        }
-        else{
-            console.log("LIMIT EXCEDDED, TRY AFTER SOME TIME")
-        }
-    }
-}
+// function clicklimiter(){
+//     let click=0;
+//     return function(){
+//         if(click <5){
+//             click++
+//             console.log(`clicked : ${click} times `)
+//         }
+//         else{
+//             console.log("LIMIT EXCEDDED, TRY AFTER SOME TIME")
+//         }
+//     }
+// }
 
-let func=clicklimiter()
-func();
-func();
-func();
-func();
-func();
-func();
+// let func=clicklimiter()
+// func();
+// func();
+// func();
+// func();
+// func();
+// func();
 
 
 //now the click inside the fuc clicklimiter is private you can not access it out side the function you can now only access or use it through closure not original one its backlinks 
+
+
+// TOASTER PROJECT WITH CLOSURE
+
+function createToaster(config) {
+
+    return function (str) {
+        let div = document.createElement("div");
+        div.textContent = str;
+        div.className =
+            `inline-block ${config.theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-black"} px-6 py-3 rounded shadow-lg pointer-events-none`;
+        document.querySelector(".parent").appendChild(div);
+
+        if (config.positionX !== "left" || config.positionY !== "top") {
+            document.querySelector(".parent").classList.add("fixed");
+            document.querySelector(".parent").className +=
+                `${config.positionX === "right" ? "right-5" : "left-5"} ${config.positionY === "bottom" ? "bottom-5" : "top-5"}`;
+        }
+
+        setTimeout(() => {
+            document.querySelector(".parent").removeChild(div);
+        }, config.duration * 1000);
+    };
+}
+
+let toaster = createToaster({
+    positionX: "right",
+    positionY: "bottom",
+    theme: "dark",
+    duration: 3,
+});
+
+toaster("Download Done!");
+setTimeout(() => {
+    toaster("Danish is Coding!")
+}, 2000);
