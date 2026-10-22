@@ -197,3 +197,44 @@
 // let val = new Abcd();
 //new Abcd(); make blank object
 
+
+//this keyword value 
+// 1 global - window 
+// 2 function - window 
+// 3 method with es5 function - object 
+// 4 method with es6 arrow function - window 
+// 5 arrow fucntion inside es5 method - object 
+// 6 es5 function inside es5 method - window 
+// 7 event handler - element 
+// 8 class -blank object
+
+
+// CALL APPLY BIND
+//function ko call karta waqt ap set kar sakta hoo ka aus ki this ki value kia hogi
+
+// let obj={
+//     name : "harsh",
+//     age : 22
+// };
+// function abcd(){
+//     // console.log(this);
+//     console.log(this.name);
+// }
+// abcd();
+// abcd.call(obj);
+//always function will be call
+
+let obj={
+    name : "harsh",
+    age : 22
+};
+function abcd(a,b,c){
+    // console.log(this);
+    console.log(this,a,b,c);
+}
+// abcd();
+// abcd.call(obj,1,2,3);
+
+//Now apply is rule is that if you are sending more than one parameter apply can you will only send 2 parameter first one is 
+// obiect and second is your all values in an array
+abcd.apply(obj,[1,2,3]);
