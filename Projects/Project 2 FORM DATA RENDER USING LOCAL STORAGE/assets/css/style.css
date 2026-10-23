@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    /* Dark Gradient Background */
+    background: linear-gradient(135deg, #150a21, #1b1642, #0d0914);
+
+    color: white;
+    font-family: sans-serif;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    width: 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+
+.checkbox-group label {
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.radio-group{
+    gap: 20px;
+}
+
+
+#submitbutton {
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 10px 30px;
+    cursor: pointer;
+}

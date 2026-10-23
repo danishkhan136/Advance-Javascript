@@ -225,8 +225,8 @@
 //always function will be call
 
 let obj={
-    name : "harsh",
-    age : 22
+    name : "Danish",
+    age : 23
 };
 function abcd(a,b,c){
     // console.log(this);
@@ -235,6 +235,13 @@ function abcd(a,b,c){
 // abcd();
 // abcd.call(obj,1,2,3);
 
+// APPLY
 //Now apply is rule is that if you are sending more than one parameter apply can you will only send 2 parameter first one is 
 // obiect and second is your all values in an array
-abcd.apply(obj,[1,2,3]);
+// abcd.apply(obj,[1,2,3]);
+
+//BIND
+//bind call ua apply ki tara function ko run nahi karta . ya aus function ki aik new copy banata hai aur aur aus ma jo by defualt this jo window retha hai aus ko change kar ka object kar deta hai
+abcd.bind(obj,1,2,3);
+let func =abcd.bind(obj,1,2,3);
+func();

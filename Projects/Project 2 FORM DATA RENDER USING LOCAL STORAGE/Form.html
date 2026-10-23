@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM RENDER</title>
+    <link rel="stylesheet" href="../Project 2 FORM DATA RENDER USING LOCAL STORAGE/assets/css/style.css">
+</head>
+
+<body>
+
+    <form action="">
+        <label for="name">name</label>
+        <input type="text" class="form-input" id="username" required>
+
+        <label for="email">email</label>
+        <input type="email" class="form-input" id="useremail" required>
+
+        <label for="age">age</label>
+        <input type="number" class="form-input" min="1" max="100" id="userage" required>
+
+        <label for="phone">mobile</label>
+        <input type="text" class="form-input" id="usernumber" required>
+
+        <label>YOUR SKILLS:</label>
+
+        <div class="checkbox-group">
+            <input type="checkbox" name="skills" id="skill_html" value="HTML">
+            <label for="skill_html">HTML</label>
+
+            <input type="checkbox" name="skills" id="skill_css" value="CSS">
+            <label for="skill_css">CSS</label>
+
+            <input type="checkbox" name="skills" id="skill_js" value="JS">
+            <label for="skill_js">JS</label>
+
+            <input type="checkbox" name="skills" id="skill_react" value="React">
+            <label for="skill_react">React</label>
+        </div>
+
+
+        </div>
+
+        <label>YOUR GENDER:</label>
+
+        <div class="radio-group">
+            <input type="radio" name="gender" value="female" required> Female
+            <input type="radio" name="gender" value="Male" required> Male
+        </div>
+
+        <div>
+            <label for="password">password</label>
+            <input type="password" class="form-input" id="userpassword" required>
+        </div>
+
+        <input type="submit" id="submitbutton">
+    </form>
+
+    <script src="../Project 2 FORM DATA RENDER USING LOCAL STORAGE/assets/js/script.js"></script>
+</body>
+
+</html>

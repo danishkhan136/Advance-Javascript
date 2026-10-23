@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    /* Dark Gradient Background */
+    background: linear-gradient(135deg, #150a21, #1b1642, #0d0914);
+
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Pehli image wale bare button ka design */
+.big-center-btn {
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 50px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 4px 15px rgba(216, 27, 96, 0.4);
+}
+
+.big-center-btn:hover {
+    background-color: #e91e63;
+}
+
+/* List ka Container - Koi white background nahi */
+.transparent-list {
+    background: transparent; /* Peeche ka body color nazar aayega */
+    color: white; /* Text color white */
+    width: 400px;
+}
+
+.data-heading {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* List ke items ka design */
+.data-items {
+    list-style-type: none; /* Bullets hatane ke liye */
+    padding: 0;
+}
+
+.data-items li {
+    background-color: rgba(255, 255, 255, 0.1); /* Halka sa glass effect line ke liye */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #d81b60; /* Left side par pink line design ke liye */
+    font-size: 16px;
+}
