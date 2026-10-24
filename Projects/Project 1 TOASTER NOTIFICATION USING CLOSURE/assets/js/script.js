@@ -16,14 +16,14 @@ function createToaster(config) {
         }
 
         setTimeout(() => {
-            document.querySelector(".parent").removeChild(div);
-        }, config.duration * 1000);
+            div.remove();
+        }, (config.duration || 3) * 1000);
     };
 }
 
 let toaster = createToaster({
-    positionX: "right",
-    positionY: "bottom",
+    positionX: "left",
+    positionY: "top",
     theme: "dark",
     duration: 3,
 });
