@@ -9,58 +9,52 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="min-h-screen flex items-center justify-center p-4">
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 min-h-screen text-white">
 
     <!-- Form Container -->
-    <div class="bg-[#212121] w-full max-w-md rounded-2xl p-8 shadow-xl border border-[#2a2a2a]">
+    <form autocomplete="off" class="bg-[#1e1e1e] rounded-2xl shadow-xl p-8 w-full max-w-lg mx-auto font-sans mb-12 mt-12">
+        <h2 class="text-3xl font-bold mb-8 text-center tracking-tight">Add User</h2>
 
-        <!-- Title -->
-        <h2 class="text-white text-2xl font-bold text-center mb-8">Add User</h2>
+        <!-- Name Field -->
+        <div class="mb-5">
+            <label class="block font-medium mb-2 text-sm" for="name">Name</label>
+            <input class="w-full px-4 py-3 bg-[#2d2d2d] rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500"
+                type="text" id="name" name="name" required>
+        </div>
 
-        <form action="#" method="POST" class="space-y-5">
+        <!-- Role Field -->
+        <div class="mb-5">
+            <label class="block font-medium mb-2 text-sm" for="role">Role</label>
+            <input class="w-full px-4 py-3 bg-[#2d2d2d] rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500"
+                type="text" id="role" name="role" required>
+        </div>
 
-            <!-- Name Field -->
-            <div>
-                <label for="name" class="block text-sm font-semibold text-gray-200 mb-1.5 ml-1">Name</label>
-                <input type="text" id="name" name="name"
-                    class="w-full bg-[#323232] text-white rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#555] transition-all border border-transparent"
-                    autocomplete="off">
-            </div>
+        <!-- Bio Field -->
+        <div class="mb-5">
+            <label class="block font-medium mb-2 text-sm" for="bio">Bio</label>
+            <textarea
+                class="w-full px-4 py-3 bg-[#2d2d2d] rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500 h-32 resize-none"
+                id="bio" name="bio" required></textarea>
+        </div>
 
-            <!-- Role Field -->
-            <div>
-                <label for="role" class="block text-sm font-semibold text-gray-200 mb-1.5 ml-1">Role</label>
-                <input type="text" id="role" name="role"
-                    class="w-full bg-[#323232] text-white rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#555] transition-all border border-transparent"
-                    autocomplete="off">
-            </div>
+        <!-- Photo URL Field -->
+        <div class="mb-8">
+            <label class="block font-medium mb-2 text-sm" for="photo-url">Photo URL</label>
+            <input class="w-full px-4 py-3 bg-[#2d2d2d] rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500"
+                type="url" id="photoUrl" name="photo_url" required>
+        </div>
 
-            <!-- Bio Field -->
-            <div>
-                <label for="bio" class="block text-sm font-semibold text-gray-200 mb-1.5 ml-1">Bio</label>
-                <textarea id="bio" name="bio" rows="4"
-                    class="w-full bg-[#323232] text-white rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#555] transition-all border border-transparent resize-none"></textarea>
-            </div>
+        <!-- Submit Button -->
+        <button type="submit"
+            class="w-full px-4 py-3 border border-gray-600 rounded-xl hover:bg-[#333333] transition-colors font-medium text-lg">
+            Submit
+        </button>
+    </form>
 
-            <!-- Photo URL Field -->
-            <div>
-                <label foocr="photoUrl" class="block text-sm font-semibold text-gray-200 mb-1.5 ml-1">Photo URL</label>
-                <input type="url" id="photoUrl" name="photoUrl"
-                    class="w-full bg-[#323232] text-white rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#555] transition-all border border-transparent"
-                    autocomplete="off">
-            </div>
+    <div class="users grid grid-cols-1 md: grid-cols-3 gap-10 px-6 max-w-6xl mx-auto">
 
-            <!-- Submit Button -->
-            <div class="pt-2">
-                <button type="submit"
-                    class="w-full bg-transparent border border-[#3f3f3f] text-white font-semibold rounded-xl px-4 py-3 hover:bg-[#323232] focus:ring-2 focus:ring-[#555] outline-none transition-colors">
-                    Submit
-                </button>
-            </div>
-
-        </form>
     </div>
-<script src="../Project 3/assets/js/script.js"></script>
+    <script src="../Project 3/assets/js/script.js"></script>
 </body>
 
 </html>
