@@ -1,3 +1,72 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+  
+    background: linear-gradient(135deg, #150a21, #1b1642, #0d0914);
+
+    color: white;
+    font-family: sans-serif;
+}
+
+.big-center-btn {
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 50px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 4px 15px rgba(216, 27, 96, 0.4);
+}
+
+.big-center-btn:hover {
+    background-color: #e91e63;
+}
+
+
+.transparent-list {
+    background: transparent;
+    color: white;
+    width: 400px;
+}
+
+.data-heading {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.data-items {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.data-items li {
+    background-color: rgba(255, 255, 255, 0.1); 
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #d81b60; 
+    font-size: 16px;
+} */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +86,7 @@ body {
     font-family: sans-serif;
 }
 
-/* Pehli image wale bare button ka design */
+
 .big-center-btn {
     background-color: #d81b60;
     color: white;
@@ -34,13 +103,7 @@ body {
     background-color: #e91e63;
 }
 
-/* List ka Container - Koi white background nahi */
-.transparent-list {
-    background: transparent; /* Peeche ka body color nazar aayega */
-    color: white; /* Text color white */
-    width: 400px;
-}
-
+/* Heading Design */
 .data-heading {
     text-align: center;
     font-size: 28px;
@@ -49,17 +112,44 @@ body {
     letter-spacing: 2px;
 }
 
-/* List ke items ka design */
-.data-items {
-    list-style-type: none; /* Bullets hatane ke liye */
-    padding: 0;
+/* Table Container ko thora bara (wide) karna hoga */
+.table-container {
+    width: 90vw;
+    /* Screen ki width ke hisaab se adjust hoga */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.data-items li {
-    background-color: rgba(255, 255, 255, 0.1); /* Halka sa glass effect line ke liye */
-    margin-bottom: 10px;
+/* Main Table ki styling */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    /* Border radius ko table par apply karne ke liye */
+    color: white;
+}
+
+/* Table ke boxes (cells) ki styling */
+.student-table th,
+.student-table td {
     padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #d81b60; /* Left side par pink line design ke liye */
-    font-size: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Table ki Heading (Top Row) ko Pink karna */
+.student-table th {
+    background-color: #d81b60;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Jab mouse kisi row par aaye toh halka sa highlight ho */
+.student-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }

@@ -1,34 +1,46 @@
 // HTML elements ko pakarna
-const detailsBtn = document.getElementById("detailsBtn");
-const dataListContainer = document.getElementById("dataListContainer");
+const detailsBtn = document.querySelector("#detailsBtn");
+const dataListContainer = document.querySelector("#dataListContainer");
+const tableBody = document.querySelector("#tableBody");
 
-// Button par click event lagana
 detailsBtn.addEventListener("click", function () {
 
     // LocalStorage se data nikalna
     let storedData = localStorage.getItem("studentInfo");
 
     if (storedData) {
-        // String ko wapas Object banana
-        let userData = JSON.parse(storedData);
+        // String ko wapas Array (Object ki list) banana
+        let studentsArray = JSON.parse(storedData);
 
-        // Data ko HTML ke spans mein dalna
-        document.getElementById("rName").innerText = userData.fullName;
-        document.getElementById("rEmail").innerText = userData.emailAddress;
-        document.getElementById("rAge").innerText = userData.userAge;
-        document.getElementById("rMobile").innerText = userData.phone;
-        document.getElementById("rGender").innerText = userData.gender;
+        // Pehle se agar table mein kuch ho toh usay clear kar do
+        tableBody.innerHTML = "";
 
-        // Skills array ko comma se jodna
-        document.getElementById("rSkills").innerText = userData.skills.join(", ");
+        // 🌟 Asli Magic: Array par Loop chalana 🌟
+        studentsArray.forEach(function (user) {
+
+            // Har user ke liye ek nayi HTML row (tr) banana Template Literals se
+            let rowHTML = `
+                <tr>
+                    <td>${user.fullName}</td>
+                    <td>${user.emailAddress}</td>
+                    <td>${user.userAge}</td>
+                    <td>${user.phone}</td>
+                    <td>${user.gender}</td>
+                    <td>${user.skills.join(", ")}</td>
+                </tr>
+            `;
+
+            // Is row ko table body ke andar add (append) karna
+            tableBody.innerHTML += rowHTML;
+        });
 
         // Button ko hide karna
         detailsBtn.style.display = "none";
 
-        // List ko show karna
+        // Table wale container ko show karna
         dataListContainer.style.display = "block";
 
     } else {
-        alert("Koi data nahi mila! Pehle index.html se form fill karein.");
+        alert("NO ENTRY FOUND");
     }
 });
