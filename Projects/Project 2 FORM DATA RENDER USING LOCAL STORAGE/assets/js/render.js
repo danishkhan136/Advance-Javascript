@@ -45,5 +45,5 @@ detailsBtn.addEventListener("click", function () {
     }
 });
 
-// no entry found screen 
+// no entry found screen
 // show and hide password and show password when you match root password

@@ -40,7 +40,7 @@ const userManager = {
         this.renderUi();
     },
     renderUi: function () {
-        document.querySelector(".users").innerHTML="";
+        document.querySelector(".users").innerHTML = "";
         this.users.forEach(function (user) {
             // 1. Create the main container div
             const card = document.createElement('div');
@@ -77,7 +77,7 @@ const userManager = {
             document.querySelector(".users").appendChild(card);
         })
     },
-    removeUnser: function () { 
+    removeUnser: function () {
         // remove user bana hai click listener kar kaa pop nahi karna kune ka wo last wala hata dega aur remove user karta hii 
         // render ui chalana hai
     },
