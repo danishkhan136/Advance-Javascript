@@ -106,3 +106,6 @@ form.addEventListener("submit", function (e) {
     alert("Form submitted successfully!");
 
 })
+
+// password pa show and hide
+// show details ka button
