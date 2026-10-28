@@ -403,46 +403,73 @@
 
 // extends class full understanding
 
-class User {
-    constructor(name,address,username,email){
-        this.name=name;
-        this.address=address;
-        this.username=username;
-        this.email=email;
-        this.role="user";
-    }
+// class User {
+//     constructor(name,address,username,email){
+//         this.name=name;
+//         this.address=address;
+//         this.username=username;
+//         this.email=email;
+//         this.role="user";
+//     }
 
-    write(text){
-        let h1 = document.createElement("h1");
-        h1.textContent=`${this.name} : ${text}`;
-        document.body.appendChild(h1);
+//     write(text){
+//         let h1 = document.createElement("h1");
+//         h1.textContent=`${this.name} : ${text}`;
+//         document.body.appendChild(h1);
 
-    }
+//     }
 
-    checkRole(){
-        return `You are a ${this.role}`;
-    }
-}
+//     checkRole(){
+//         return `You are a ${this.role}`;
+//     }
+// }
 
-class Admin extends User{
-    constructor(name,address,username,email){
-        super(name,address,username,email);
-        this.role= "admin"
-    }
+// class Admin extends User{
+//     constructor(name,address,username,email){
+//         super(name,address,username,email);
+//         this.role= "admin"
+//     }
 
-    remove(){
-        document.querySelectorAll("h1").forEach(function(element){
-            element.remove();
-        })
-    }
-}
+//     remove(){
+//         document.querySelectorAll("h1").forEach(function(element){
+//             element.remove();
+//         })
+//     }
+// }
 
 
-let u1 = new User("Danish","hyd","ddk","dd@gmail.com","user");
-u1.write("hello");
-let u2 = new User("wajahat","hyd","dwk","dw@gmail.com","user");
-u2.write("hi");
-u1.write("ma theek  ap kesa hoo");
-u2.write("ma bhi theek");
-let a1 = new Admin("Papa","hyd","Papa","Papa@gmail.com");
-a1.write("parai karo");
+// let u1 = new User("Danish","hyd","ddk","dd@gmail.com","user");
+// u1.write("hello");
+// let u2 = new User("wajahat","hyd","dwk","dw@gmail.com","user");
+// u2.write("hi");
+// u1.write("ma theek  ap kesa hoo");
+// u2.write("ma bhi theek");
+// let a1 = new Admin("Papa","hyd","Papa","Papa@gmail.com");
+// a1.write("parai karo");
+
+
+
+// INHERITANCE - class -> class
+
+//CLASICAL INHERITANCE - IS PRESENT IN ALL LANGUAGE js, cpp, java
+//extends is classical inheritance
+//making classes and extends them this is called classical inheritance
+
+
+// PROTOTYPAL INHERITANCE  - THIS IS ONLY IN JAVASCRIPT
+//obj to obj inheritance
+
+let coffee={
+    color : "black",
+    drink : function(){
+        console.log("good");
+    },
+};
+
+let arabicaCoffee =Object.create(coffee);
+console.log(arabicaCoffee);
+arabicaCoffee.taste="sweet";
+console.log(arabicaCoffee)
+arabicaCoffee.drink();
+
+//ek object hai aap chaaho to uski saari props/method ko inherit kara deta hoo dusra object mein
