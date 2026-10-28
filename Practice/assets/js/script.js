@@ -224,14 +224,14 @@
 // abcd.call(obj);
 //always function will be call
 
-let obj={
-    name : "Danish",
-    age : 23
-};
-function abcd(a,b,c){
-    // console.log(this);
-    console.log(this,a,b,c);
-}
+// let obj={
+//     name : "Danish",
+//     age : 23
+// };
+// function abcd(a,b,c){
+//     // console.log(this);
+//     console.log(this,a,b,c);
+// }
 // abcd();
 // abcd.call(obj,1,2,3);
 
@@ -242,6 +242,148 @@ function abcd(a,b,c){
 
 //BIND
 //bind call ua apply ki tara function ko run nahi karta . ya aus function ki aik new copy banata hai aur aur aus ma jo by defualt this jo window retha hai aus ko change kar ka object kar deta hai
-abcd.bind(obj,1,2,3);
-let func =abcd.bind(obj,1,2,3);
-func();
+// abcd.bind(obj,1,2,3);
+// let func =abcd.bind(obj,1,2,3);
+// func();
+
+
+//OOP
+
+// humein seekna hai factories banana matlab,ki aap ek baar blueprint bana do har object kaisa dikhana gaa aur hum log naye naye 
+// objects with different values bana paayege , yahi upar upar sa OOPS ka pura kam hai
+
+
+//constructor function way of making class
+
+// function CreatePencil(name,price,color,company){
+
+//     this.name=name;
+//     this.price = price;
+//     this.company=company;
+//     this.color=color;
+
+//     this.write= function(text){
+//         let h1 = document.createElement("h1");
+//         h1.textContent= text;
+//         h1.style.color=color
+//         document.body.append(h1);
+//     }
+// }
+
+// let pencil1 = new CreatePencil("d1",50,"blue","dollar");
+// let pencil2 = new CreatePencil("m2",100,"black","piano");
+// pencil1.write("hello");
+// pencil2.write("world");
+
+//constructor fuction are those function who start with Capital letters and to prnt the or save them we use new keyword
+
+
+//syntactic sugar way (a nicer way of writing it) same as C++ and java abd a better way
+
+// class Pencil {
+//     // This is the exact same function you wrote
+//     constructor(name, price, color, company) {
+//         this.name = name;
+//         this.price = price;
+//         this.company = company;
+//         this.color = color;
+//     }
+
+//     // Methods are usually added outside the constructor in class syntax
+//     write(text) {
+//         let h1 = document.createElement("h1");
+//         h1.textContent = text;
+//         h1.style.color = this.color; 
+//         document.body.append(h1);
+//     }
+// }
+
+// let pencil1 = new Pencil("d1", 50, "blue", "dollar");
+// let pencil2 = new Pencil("m2", 100, "black", "piano");
+
+// pencil1.write("hello");
+
+//Prototype class
+
+// agar tumhara constructor fuction koi field apne prototype par attach karle to us constructor se banne  waale sabhi new instances 
+// yaani ki objects, ke paas wo field automatically chali jaati hai
+
+// function CreatePencil(name,price,color){
+//     this.name=name;
+//     this.price=price;
+//     this.color=color;
+//     this.write= function(text){
+//         let h1= document.createElement("h1");
+//         h1.textContent=text;
+//         h1.style.color="blue";
+//         document.body.append(h1);
+//     }
+// }
+
+// CreatePencil.prototype.company="Sheryians";
+
+// let pencil1 = new CreatePencil("dolar",20,"blue")
+
+
+// function CreatePencil(name,price,color,company){
+//     this.name=name;
+//     this.price=price;
+//     this.color=color;
+//     this.company=company;
+// }
+
+// CreatePencil.prototype.write= function(text){
+//         let h1= document.createElement("h1");
+//         h1.textContent=text;
+//         h1.style.color=this.color;
+//         document.body.append(h1);
+//     }
+
+
+// let pencil1 = new CreatePencil("dolar",20,"blue","dollar");
+// let pencil2 = new CreatePencil("dolar",20,"blue","cigale");
+
+
+// class CreatePencil{
+//     constructor(name,company,color,price){
+//         this.name=name;
+//         this.company=company;
+//         this.price=price;
+//         this.color=color;
+//     }
+//     write(text){
+//         let h1= document.createElement("h1");
+//         h1.textContent=text;
+//         h1.style.color=this.color;
+//         document.body.append(h1);
+//     }
+
+//     erase(){
+//         // document.querySelectorAll("h1").forEach(function(element){
+//         // // this will not work because here this value became 
+//         // undefined
+//         document.querySelectorAll("h1").forEach((element)=>{
+//             // element.remove();//directly reomve all
+//             if(element.style.color === this.color){
+//                 element.remove();
+//             };// reomve element according to that istance/object colo
+//         })
+//     }
+// }
+
+
+// let p1 = new CreatePencil("dolar","dollar","black",20);
+// let p2 = new CreatePencil("dolar","dollar","blue",20);
+
+
+//extends in class
+
+class CreatePencil{
+    constructor(name,address,username,email,role){
+        this.name=name;
+        this.username=username;
+        this.emial=emial;
+        this.address=address;
+        this.role=role;
+    }
+}
