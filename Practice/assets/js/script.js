@@ -260,7 +260,7 @@
 //     this.name=name;
 //     this.price = price;
 //     this.color=color;
-//     this.company=company;    
+//     this.company=company;
 
 //     this.write= function(text){
 //         let h1 = document.createElement("h1");
@@ -459,17 +459,33 @@
 // PROTOTYPAL INHERITANCE  - THIS IS ONLY IN JAVASCRIPT
 //obj to obj inheritance
 
-let coffee={
-    color : "black",
-    drink : function(){
-        console.log("good");
-    },
-};
+// let coffee={
+//     color : "black",
+//     drink : function(){
+//         console.log("good");
+//     },
+// };
 
-let arabicaCoffee =Object.create(coffee);
-console.log(arabicaCoffee);
-arabicaCoffee.taste="sweet";
-console.log(arabicaCoffee)
-arabicaCoffee.drink();
+// let arabicaCoffee =Object.create(coffee);
+// console.log(arabicaCoffee);
+// arabicaCoffee.taste="sweet";
+// console.log(arabicaCoffee)
+// arabicaCoffee.drink();
 
 //ek object hai aap chaaho to uski saari props/method ko inherit kara deta hoo dusra object mein
+
+// Synchronous and Asynchronous JS
+
+// koi bhi code js ma line by line chelaga aur ya natural pattern bhi hota hai ki code line by line chale , but kabhi kabar aise
+// hota hai life mein jaha par apka code  wait karta utni der mein agla code chal gata hai
+
+//example
+// console.log(1);
+// setTimeout(() => {
+//     console.log(2);
+// }, 2000);
+// console.log(3);
+// console.log(4);
+// console.log(5);
+
+
