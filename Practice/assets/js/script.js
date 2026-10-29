@@ -489,3 +489,76 @@
 // console.log(5);
 
 
+// CALLBACKS FUNCTION EXAMPLES
+
+
+// asa code joo line by line chala hota  hai synchronous code
+// asa code joo chalna ka lia ready hogai tab chala wo hai Asynchronous
+
+// function aftersometime(fnc) {
+//     setTimeout(fnc, Math.floor(Math.random() * 10) * 1000);
+// }
+
+// aftersometime(/*from here*/function () {
+//     console.log(i);
+// }/*to here */);//this is callback function
+
+// ek function ko agar aap ek aur function bhej dee raha hoo parameter ma ,  to wo parameter wala
+// fuction callback function kehalata hai
+
+
+// CALLBACK HELL
+
+
+// function profilelekaraao(username, cb) {
+//     setTimeout(() => {
+//         console.log(`profile fetched of ${username}`)
+//         cb("lieutienent Danish khan")
+//     }, 2000)
+// }
+// IN REAL WORLD THIS FUNCTION WILL BE IN LIBRARY MEANS IT CAN BE ANY WHERE IN THE WORLD WE NOT KNOW BUT WE USE IT SAME AS ALERT 
+// WE USE IT BUT WE NOT NOO WHERE JS DEVELOPER WRITTEN AND SAVE IT
+
+// function profilelekaraao(username, cb) {
+//     setTimeout(() => {
+//         cb({_id: 97529,username,age:22,email:"ali@gmail.com"})
+//     }, 2000)
+// }
+
+// profilelekaraao("danish", function (data) {
+//     console.log(data);
+// });
+// profilelekaraao accept kar raha hai danish koo aur jab profilelekaraao danish ka data nikal laa to aus ko mera callback ma rak 
+// dee (callback ma rakna ka kam bhi profilelekaraao kar raha hai) jo callback function mana beja hua hai to phir profilelekaraao 
+// naa callback ma data rak dia
+
+function profilelekaraao(username, cb) {
+    console.log("fetching Profile Data...");
+    setTimeout(() => {
+        cb({_id: 97529,username,age:22,email:"ali@gmail.com"})
+    }, 2000)
+}
+
+function SareePostLekarAoo(id,cb){
+    console.log("fetching All posts...");
+    setTimeout(() => {
+        cb({_id:id,posts:["hey","hello","bye"]})
+    },3000);
+}
+
+function savedPostsNikaloo(id,cb){
+    console.log("fetching Saved posts...")
+    setTimeout(() => {
+        cb({_id:id,saved:[1,2,3,4,5,6,7,8,9]})
+    }, 3000); 
+}
+
+profilelekaraao("danish", function (data) {
+    console.log(data)
+    SareePostLekarAoo(data._id,function(posts){
+        console.log(posts);
+        savedPostsNikaloo(data.id,function(saved){
+            console.log(saved);
+        })
+    });
+});
