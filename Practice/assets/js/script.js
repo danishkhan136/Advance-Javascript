@@ -532,33 +532,61 @@
 // dee (callback ma rakna ka kam bhi profilelekaraao kar raha hai) jo callback function mana beja hua hai to phir profilelekaraao 
 // naa callback ma data rak dia
 
-function profilelekaraao(username, cb) {
-    console.log("fetching Profile Data...");
-    setTimeout(() => {
-        cb({_id: 97529,username,age:22,email:"ali@gmail.com"})
-    }, 2000)
-}
+// function profilelekaraao(username, cb) {
+//     console.log("fetching Profile Data...");
+//     setTimeout(() => {
+//         cb({_id: 97529,username,age:22,email:"ali@gmail.com"})
+//     }, 2000)
+// }
 
-function SareePostLekarAoo(id,cb){
-    console.log("fetching All posts...");
-    setTimeout(() => {
-        cb({_id:id,posts:["hey","hello","bye"]})
-    },3000);
-}
+// function SareePostLekarAoo(id,cb){
+//     console.log("fetching All posts...");
+//     setTimeout(() => {
+//         cb({_id:id,posts:["hey","hello","bye"]})
+//     },3000);
+// }
 
-function savedPostsNikaloo(id,cb){
-    console.log("fetching Saved posts...")
-    setTimeout(() => {
-        cb({_id:id,saved:[1,2,3,4,5,6,7,8,9]})
-    }, 3000); 
-}
+// function savedPostsNikaloo(id,cb){
+//     console.log("fetching Saved posts...")
+//     setTimeout(() => {
+//         cb({_id:id,saved:[1,2,3,4,5,6,7,8,9]})
+//     }, 3000); 
+// }
 
-profilelekaraao("danish", function (data) {
-    console.log(data)
-    SareePostLekarAoo(data._id,function(posts){
-        console.log(posts);
-        savedPostsNikaloo(data.id,function(saved){
-            console.log(saved);
-        })
-    });
+// profilelekaraao("danish", function (data) {
+//     console.log(data)
+//     SareePostLekarAoo(data._id,function(posts){
+//         console.log(posts);
+//         savedPostsNikaloo(data.id,function(saved){
+//             console.log(saved);
+//         })
+//     });
+// });
+
+// PROMISE
+
+// aap ek promise banate hoo jo ki doo states ma sa ek state ma ja sakta hai and wo ya to resolve hoga ya to reject hoga ab wo kya 
+// hoga ye to waqt batai gaa par humein dono ke liye code likhna hai 
+
+let pr = new Promise(function(res,rej){
+    setTimeout(() => {
+        let rn= Math.floor(Math.random()*10);
+       if(rn>5) res("resolved with " + rn);
+       else rej("reject with " + rn);
+    }, 3000);
 });
+
+// pr
+// .then
+// (function(val){
+//     console.log(val);
+// })
+// .catch
+// (function(val){
+//     console.log(val);
+// });
+
+
+// try and catch for Synchronous program
+// then and catch for Asynchronous program
+// async and await with try 
