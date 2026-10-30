@@ -568,12 +568,12 @@
 // aap ek promise banate hoo jo ki doo states ma sa ek state ma ja sakta hai and wo ya to resolve hoga ya to reject hoga ab wo kya 
 // hoga ye to waqt batai gaa par humein dono ke liye code likhna hai 
 
-let pr = new Promise(function(res,rej){
+let pr = new Promise(function (res, rej) {
     setTimeout(() => {
-        let rn= Math.floor(Math.random()*10);
-       if(rn>5) res("resolved with " + rn);
-       else rej("reject with " + rn);
-    }, 3000);
+        let rn = Math.floor(Math.random() * 10);
+        if (rn > 5) res("resolved with " + rn);
+        else rej("reject with " + rn);
+    }, 1000);
 });
 
 // pr
@@ -590,3 +590,16 @@ let pr = new Promise(function(res,rej){
 // try and catch for Synchronous program
 // then and catch for Asynchronous program
 // async and await with try 
+
+
+async function abcd() {
+    try {
+        let val = await pr;
+        console.log(val);
+    } catch (err) {
+        console.log(err);
+    }
+
+}
+
+abcd();
