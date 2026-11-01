@@ -516,7 +516,7 @@
 //         cb("lieutienent Danish khan")
 //     }, 2000)
 // }
-// IN REAL WORLD THIS FUNCTION WILL BE IN LIBRARY MEANS IT CAN BE ANY WHERE IN THE WORLD WE NOT KNOW BUT WE USE IT SAME AS ALERT 
+// IN REAL WORLD THIS FUNCTION WILL BE IN LIBRARY MEANS IT CAN BE ANY WHERE IN THE WORLD WE NOT KNOW BUT WE USE IT SAME AS ALERT
 // WE USE IT BUT WE NOT NOO WHERE JS DEVELOPER WRITTEN AND SAVE IT
 
 // function profilelekaraao(username, cb) {
@@ -528,8 +528,8 @@
 // profilelekaraao("danish", function (data) {
 //     console.log(data);
 // });
-// profilelekaraao accept kar raha hai danish koo aur jab profilelekaraao danish ka data nikal laa to aus ko mera callback ma rak 
-// dee (callback ma rakna ka kam bhi profilelekaraao kar raha hai) jo callback function mana beja hua hai to phir profilelekaraao 
+// profilelekaraao accept kar raha hai danish koo aur jab profilelekaraao danish ka data nikal laa to aus ko mera callback ma rak
+// dee (callback ma rakna ka kam bhi profilelekaraao kar raha hai) jo callback function mana beja hua hai to phir profilelekaraao
 // naa callback ma data rak dia
 
 // function profilelekaraao(username, cb) {
@@ -550,7 +550,7 @@
 //     console.log("fetching Saved posts...")
 //     setTimeout(() => {
 //         cb({_id:id,saved:[1,2,3,4,5,6,7,8,9]})
-//     }, 3000); 
+//     }, 3000);
 // }
 
 // profilelekaraao("danish", function (data) {
@@ -565,16 +565,16 @@
 
 // PROMISE
 
-// aap ek promise banate hoo jo ki doo states ma sa ek state ma ja sakta hai and wo ya to resolve hoga ya to reject hoga ab wo kya 
-// hoga ye to waqt batai gaa par humein dono ke liye code likhna hai 
+// aap ek promise banate hoo jo ki doo states ma sa ek state ma ja sakta hai and wo ya to resolve hoga ya to reject hoga ab wo kya
+// hoga ye to waqt batai gaa par humein dono ke liye code likhna hai
 
-let pr = new Promise(function (res, rej) {
-    setTimeout(() => {
-        let rn = Math.floor(Math.random() * 10);
-        if (rn > 5) res("resolved with " + rn);
-        else rej("reject with " + rn);
-    }, 1000);
-});
+// let pr = new Promise(function (res, rej) {
+//     setTimeout(() => {
+//         let rn = Math.floor(Math.random() * 10);
+//         if (rn > 5) res("resolved with " + rn);
+//         else rej("reject with " + rn);
+//     }, 1000);
+// });
 
 // pr
 // .then
@@ -589,17 +589,46 @@ let pr = new Promise(function (res, rej) {
 
 // try and catch for Synchronous program
 // then and catch for Asynchronous program
-// async and await with try 
+// async and await with try
 
 
-async function abcd() {
-    try {
-        let val = await pr;
-        console.log(val);
-    } catch (err) {
-        console.log(err);
-    }
+// async function abcd() {
+//     try {
+//         let val = await pr;
+//         console.log(val);
+//     } catch (err) {
+//         console.log(err);
+//     }
 
-}
+// }
 
-abcd();
+// abcd();
+
+
+
+// FETCH API --> getting data from url
+//JAVASCRIPT OBJECT NOTATION
+//API give data in json format
+
+//js has inbuild function fetch()
+
+// fetch("https://randomuser.me/api/");
+// fetch is promised based so we hace two different ways to use it
+
+// fetch("https://randomuser.me/api/")
+// // .then(raw => raw.json()).//can also do this way futher explain ahead 
+// .then((rawdata)=>{
+//    return raw.json();
+// })
+// .then((data)=>{
+//     console.log(data.results[0].name.first)
+// })
+// .catch((err)=>{
+//     console.log(err);
+// });
+
+
+// fetch("https://randomuser.me/api/?results=5")
+//     .then((raw) => raw.json())
+//     .then((data) => console.log(data.results))
+//     .catch((err) => console.log(err));
