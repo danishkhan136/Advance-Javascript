@@ -632,3 +632,25 @@
 //     .then((raw) => raw.json())
 //     .then((data) => console.log(data.results))
 //     .catch((err) => console.log(err));
+
+
+// FORM SUBMITION VIA FETCH
+
+// this is an exampple code for run this code first you have to make an html form and need a valid URL for form submission
+
+// let form = document.querySelector("form");
+// let name = document.querySelector("#name");
+// let email = document.querySelector("#email");
+// let password = document.querySelector("#password");
+
+// form.addEventListener("submit", function (evt) {
+//     evt.preventDefault();
+//     fetch("url", {
+//         method: "POST",
+//         body: JSON.stringify({
+//             name,
+//             email,
+//             password,
+//         }),
+//     });
+// });
