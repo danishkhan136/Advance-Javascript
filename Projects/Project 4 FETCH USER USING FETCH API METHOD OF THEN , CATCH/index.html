@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<!-- <body class="flex min-h-screen items-center justify-center bg-slate-100 p-6 font-sans text-slate-900">
+    <main class="w-full max-w-sm">
+        <article class="overflow-hidden rounded-2xl bg-white shadow-xl shadow-slate-200/70">
+            <div class="h-28 bg-gradient-to-r from-indigo-500 to-violet-500"></div>
+            <div class="px-6 pb-6">
+                <div class="-mt-12 flex items-end justify-between">
+                    <div class="flex h-24 w-24 items-center justify-center rounded-full border-4 border-white bg-indigo-100 text-3xl font-bold text-indigo-700"
+                        aria-label="Avatar for Alex Morgan">AM</div>
+                    <span
+                        class="mb-2 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
+                        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Online
+                    </span>X
+                </div>
+
+                <div class="mt-4">
+                    <h1 class="text-2xl font-bold tracking-tight">Alex Morgan</h1>
+                    <p class="mt-1 text-sm text-slate-500">Product Designer <span class="mx-1">·</span> San Francisco,
+                        CA</p>
+                    <p class="mt-4 text-sm leading-6 text-slate-600">Designing thoughtful digital experiences and
+                        turning complex problems into simple, useful products.</p>
+                </div>
+
+                <div class="mt-6 grid grid-cols-3 divide-x divide-slate-200 rounded-xl bg-slate-50 py-3 text-center">
+                    <div>
+                        <p class="font-bold">128</p>
+                        <p class="mt-1 text-xs text-slate-500">Projects</p>
+                    </div>
+                    <div>
+                        <p class="font-bold">8.4k</p>
+                        <p class="mt-1 text-xs text-slate-500">Followers</p>
+                    </div>
+                    <div>
+                        <p class="font-bold">560</p>
+                        <p class="mt-1 text-xs text-slate-500">Following</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex gap-3">
+                    <button type="button"
+                        class="flex-1 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Follow</button>
+                    <button type="button"
+                        class="flex-1 rounded-lg border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Message</button>
+                </div>
+            </div>
+        </article>
+    </main> 
+    </body-->
+
+
+<body>
+
+    <div class="users bg-gray-900 min-h-screen flex items-center justify-center gap-4">
+    </div>
+
+    <!-- <button type="button" onclick="window.location.reload()" aria-label="Refresh users"
+        class="fixed bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full bg-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow-xl transition hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 7v5h-5" />
+            <path d="M4 17v-5h5" />
+            <path d="M5.6 9a7 7 0 0 1 11.6-2L20 12M4 12l2.8 5a7 7 0 0 0 11.6-2" />
+        </svg>
+        Refresh
+    </button> -->
+
+    <button id="refreshBtn"
+        class="absolute top-[70%] left-1/2 -translate-x-1/2 flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-lg transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 4v6h6M20 20v-6h-6M5.64 5.64A9 9 0 0 1 19 9M18.36 18.36A9 9 0 0 1 5 15" />
+        </svg>
+
+        Refresh
+    </button>
+
+    <script src="../Project 4 FETCH USER USING FETCH API METHOD OF THEN , CATCH/assets/js/script.js"></script>
+</body>
+
+</html>

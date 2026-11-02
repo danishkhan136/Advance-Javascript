@@ -616,7 +616,7 @@
 // fetch is promised based so we hace two different ways to use it
 
 // fetch("https://randomuser.me/api/")
-// // .then(raw => raw.json()).//can also do this way futher explain ahead 
+// // .then(raw => raw.json()).//can also do this way futher explain ahead
 // .then((rawdata)=>{
 //    return raw.json();
 // })
